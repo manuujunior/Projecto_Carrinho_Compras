@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Loja Online</title>
+    <!-- FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header>
+            <h1><i class="fa fa-shopping-cart"></i> Loja de Beleléio</h1>
+        </header>
+
+        <main>
+            <!-- Adicionar Produto -->
+            <section class="adicionar-produto">
+                <h2><i class="fa fa-plus-circle"></i> Adicionar Novo Produto</h2>
+                <form id="form-produto" autocomplete="off">
+                    <div class="form-group">
+                        <label for="nome-produto">Nome do Produto:</label>
+                        <input type="text" id="nome-produto" placeholder="Ex: Camisa" required maxlength="50" pattern="[A-Za-z0-9\s]+">
+                    </div>
+                    <div class="form-group">
+                        <label for="preco-produto">Preço (MT):</label>
+                        <input type="number" id="preco-produto" step="0.01" min="0.01" placeholder="Ex: 150.00" required>
+                    </div>
+                    <button type="submit" class="btn-adicionar"><i class="fa fa-plus"></i> Adicionar Produto</button>
+                </form>
+            </section>
+
+            <!-- Lista de Produtos Disponíveis -->
+            <section class="lista-produtos">
+                <h2><i class="fa fa-box"></i> Produtos Disponíveis</h2>
+                <div id="lista-produtos" class="produtos-grid">
+                    <!-- Produtos serão renderizados dinamicamente aqui -->
+                </div>
+            </section>
+
+            <!-- Carrinho -->
+            <section class="carrinho">
+                <h2><i class="fa fa-shopping-cart"></i> Meu Carrinho</h2>
+                <div id="itens-carrinho">
+                    <!-- Itens do carrinho serão renderizados aqui -->
+                </div>
+                <div class="carrinho-resumo">
+                    <p>Total de Produtos: <span id="total-quantidade">0</span></p>
+                    <p>Valor Total: MT <span id="total-valor">0.00</span></p>
+                    <button id="encerrar-compra" class="btn-encerrar"><i class="fa fa-check"></i> Encerrar Compra</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts em ordem: Model -> View -> Controller -->
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+</html>
