@@ -1,15 +1,10 @@
-/* ================================
-   RESET BÁSICO
-   ================================ */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ================================
-   FONTES E ESTILO GLOBAL
-   ================================ */
 body {
     font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
@@ -24,9 +19,6 @@ body {
     padding: 20px;
 }
 
-/* ================================
-   HEADER
-   ================================ */
 header {
     text-align: center;
     margin-bottom: 30px;
@@ -50,9 +42,6 @@ header p {
     color: #ecf0f1;
 }
 
-/* ================================
-   SEÇÕES
-   ================================ */
 .adicionar-produto,
 .lista-produtos,
 .carrinho {
@@ -77,9 +66,7 @@ h2 {
     padding-bottom: 10px;
 }
 
-/* ================================
-   FORMULÁRIOS
-   ================================ */
+
 .form-group {
     margin-bottom: 15px;
 }
@@ -107,9 +94,6 @@ input[type="number"]:focus {
     outline: none;
 }
 
-/* ================================
-   BOTÕES
-   ================================ */
 button {
     border: none;
     padding: 12px 25px;
@@ -159,9 +143,7 @@ button:hover {
     background: linear-gradient(90deg, #2980b9, #8e44ad);
 }
 
-//* ================================
-   LISTA DE PRODUTOS
-   ================================ */
+
 .produtos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -215,9 +197,6 @@ button:hover {
     white-space: nowrap; /* impede quebra de linha na badge */
 }
 
-/* ================================
-   RESPONSIVIDADE
-   ================================ */
 @media (max-width: 768px) {
     .produtos-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -231,9 +210,6 @@ button:hover {
 }
 
 
-/* ================================
-   CARRINHO
-   ================================ */
 #itens-carrinho {
     max-height: 300px;
     overflow-y: auto;
@@ -265,9 +241,6 @@ button:hover {
     background-color: #c0392b;
 }
 
-/* ================================
-   RESUMO DO CARRINHO
-   ================================ */
 .carrinho-resumo {
     margin-top: 15px;
     padding-top: 15px;
@@ -281,9 +254,6 @@ button:hover {
     font-weight: 600;
 }
 
-/* ================================
-   TOAST MENSAGENS
-   ================================ */
 .toast {
     position: fixed;
     bottom: 20px;
@@ -302,9 +272,6 @@ button:hover {
     to { opacity: 1; transform: translateY(0);}
 }
 
-/* ================================
-   RESPONSIVIDADE
-   ================================ */
 @media (max-width: 768px) {
     .produtos-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
